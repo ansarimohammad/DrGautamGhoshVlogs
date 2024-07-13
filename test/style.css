@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.scroll {
+    margin: auto;
+    height: 100vh; /* Adjust based on your needs */
+    overflow: hidden;
+}
+
+.scroll ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    animation: scroll 40s infinite linear;
+}
+
+.scroll ul:hover {
+    animation-play-state: paused;
+}
+
+.scroll li {
+    margin: 2px 0;
+    list-style: none;
+    position: relative;
+}
+
+.scroll img {
+    height: 300px; /* Adjust based on your needs */
+    width: auto;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+    max-height: fit-content;
+}
+
+.scroll img:hover {
+    transform: scale(1.04);
+}
+
+@keyframes scroll {
+    from {
+        margin-top: 0%;
+    }
+
+    to {
+        margin-top: -100%;
+    }
+}
